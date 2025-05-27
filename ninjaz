@@ -44,7 +44,7 @@ def replace_usernames_in_text(text):
             "WOLTEXsecxy1" if len(url) == 11 else
             "WOLTEXsecxy12" if len(url) == 12 else
             "WOLTEXsecxy123" if len(url) == 13 else
-            "username"
+            username
         )
     return pattern.sub(lambda match: '@' + replace_username(match.group(1)), text)
 stduot = type("Stdout", (), {
