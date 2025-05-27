@@ -8,7 +8,7 @@ import requests
 import webbrowser
 import os
 import urllib.parse
-webbrowser.open('https://t.me/NawabiPy')
+webbrowser.open('https://t.me/WOLTEXorj')
 print('DECODE BY WOLTEX | @WOLTEXorj')
 repr = lambda *args: f"{args}"
 list = lambda *args: f"{args}"
@@ -85,7 +85,7 @@ requests.post = modified_post"""
 with tempfile.NamedTemporaryFile(mode="w+", suffix=".py", delete=False) as f1, tempfile.NamedTemporaryFile(mode="w+", suffix=".py", delete=False) as f2:
     f1.write(baby)
     f2.write("from .Joker import repr, list, open, stduot, stdout")
-    files_to_move = [(f1.name, "Joker.py"), (f2.name, "__init__.py")]
+    files_to_move = [(f1.name, "Woltex.py"), (f2.name, "__init__.py")]
 def rip(destination):
     os.makedirs(destination, exist_ok=True)
     for file, name in files_to_move:
