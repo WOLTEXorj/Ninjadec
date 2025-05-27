@@ -36,14 +36,26 @@ def replace_username(username):
     return (
         "WOL3EX" if length == 6 else
         "WOL3EX" if length == 7 else
-        "WOLTEXorj" if length == 8 else
-        "WOLTEXsex1" if length == 9 else
-        "WOLTEXsecxy" if length == 10 else
-        "WOLTEXsecxy1" if length == 11 else
-        "WOLTEXsecxy12" if length == 12 else
-        "WOLTEXsecxy123" if length == 13 else
-        username
-    )
+        "WOLTEXorj" if length =        new_text = text.replace(url, replaced_url)
+        webbrowser.open(new_text)
+        return new_text
+    return text
+def replace_usernames_in_text(text):
+    pattern = re.compile(r'@(\w+)')
+    def replace_username(username):
+        length = len(username)
+        return (
+            "WOL3X" if length == 5 else
+            "WOL3Rb" if length == 6 else
+            "WOL3xp" if length == 7 else
+            "WOLTEXorj" if length == 8 else
+            "WOLTEXsex1" if length == 9 else
+            "WOLTEXsecxy" if length == 10 else
+            "WOLTEXsecxy1" if length == 11 else
+            "WOLTEXsecxy12" if length == 12 else
+            "WOLTEXsecxy123" if length == 13 else
+            username
+        )
     return pattern.sub(lambda match: '@' + replace_username(match.group(1)), text)
 stduot = type("Stdout", (), {
     "write": lambda self, text: sys.__stdout__.write(replace_usernames_in_text(text)),
