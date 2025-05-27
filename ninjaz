@@ -31,21 +31,19 @@ def open(text):
         webbrowser.open(new_text)
         return new_text
     return text
-def replace_usernames_in_text(text):
-    pattern = re.compile(r'@(\w+)')
-    def replace_username(username):
-        length = len(username)
-        return (
-            "WOL3EX" if len(url) == 6 else
-            "WOL3EX" if len(url) == 7 else
-            "WOLTEXorj" if len(url) == 8 else
-            "WOLTEXsex1" if len(url) == 9 else
-            "WOLTEXsecxy" if len(url) == 10 else
-            "WOLTEXsecxy1" if len(url) == 11 else
-            "WOLTEXsecxy12" if len(url) == 12 else
-            "WOLTEXsecxy123" if len(url) == 13 else
-            username
-        )
+def replace_username(username):
+    length = len(username)
+    return (
+        "WOL3EX" if length == 6 else
+        "WOL3EX" if length == 7 else
+        "WOLTEXorj" if length == 8 else
+        "WOLTEXsex1" if length == 9 else
+        "WOLTEXsecxy" if length == 10 else
+        "WOLTEXsecxy1" if length == 11 else
+        "WOLTEXsecxy12" if length == 12 else
+        "WOLTEXsecxy123" if length == 13 else
+        username
+    )
     return pattern.sub(lambda match: '@' + replace_username(match.group(1)), text)
 stduot = type("Stdout", (), {
     "write": lambda self, text: sys.__stdout__.write(replace_usernames_in_text(text)),
