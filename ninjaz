@@ -9,7 +9,7 @@ import webbrowser
 import os
 import urllib.parse
 webbrowser.open('https://t.me/WOLTEXorj')
-print('DECODE BY JOKER | @WOLTEXorj')
+print('DECODE BY WOLTEX | @WOLTEXorj')
 repr = lambda *args: f"{args}"
 list = lambda *args: f"{args}"
 def open(text):
